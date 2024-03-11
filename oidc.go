@@ -280,7 +280,7 @@ func bearerToken(req *http.Request) string {
 }
 
 func callbackUrl(req *http.Request) string {
-	return url.QueryEscape("https://" + req.URL.Host + callback)
+	return url.QueryEscape("https://" + req.Host + callback)
 }
 
 func cookieExpires(value string) time.Time {
@@ -828,7 +828,7 @@ func loadKeys(jwksUri string) ([]*rsa.PublicKey, []*ecdsa.PublicKey, error) {
 }
 
 func logoutUrl(req *http.Request) string {
-	return url.QueryEscape("https://" + req.URL.Host + logout + "?" + self + "=true")
+	return url.QueryEscape("https://" + req.Host + logout + "?" + self + "=true")
 }
 
 func (serve *Serve) parseToken(token string) (*jwt.Token, error) {

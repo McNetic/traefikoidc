@@ -1,6 +1,6 @@
 displayName: OIDC Client
 type: middleware
-import: github.com/wdonne/traefikoidc
+import: github.com/McNetic/traefikoidc
 summary: Handles the OpenID Connect authorisation code flow
 testData:
   encryptionSecretFile: "/file.json"
